@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('packages','Api\PackageController');
+Route::get('/packages/populars','Api\PackageController@populars');
+Route::get('/packages/category/{id}','Api\PackageController@getByCategory');
+
+Route::resource('comercial','Api\ComercialController');
