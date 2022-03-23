@@ -20,6 +20,7 @@ class PackageController extends Controller
         
         return $output;
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -72,7 +73,16 @@ class PackageController extends Controller
      */
     public function show($id)
     {
-        //
+        $output = [
+            'code' => 0,
+            'data' => null,
+            'msg' => ''
+        ];
+
+        $output['data'] = Pack::find($id);
+        $output['code'] = 1;
+
+        return $output;                   
     }
 
     /**

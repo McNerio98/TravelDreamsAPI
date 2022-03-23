@@ -20,8 +20,8 @@ class CreatePackagesTable extends Migration
             $table->decimal('price',8,2);
             $table->string('path_img');
             $table->string('address',200);
-            $table->integer('lat');
-            $table->integer('lng');
+            $table->string('lat');
+            $table->string('lng');
             $table->integer('category_id');
             $table->timestamps();
         });

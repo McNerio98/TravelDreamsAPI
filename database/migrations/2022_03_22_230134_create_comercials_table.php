@@ -20,8 +20,8 @@ class CreateComercialsTable extends Migration
             $table->string('category_name');
             $table->string('description');
             $table->decimal('min_price',8,2);
-            $table->integer('lat');
-            $table->integer('lng');            
+            $table->string('lat');
+            $table->string('lng');            
             $table->string('path_img');
             $table->timestamps();
         });

@@ -19,8 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('packages','Api\PackageController');
+//Route::resource('packages','Api\PackageController');
+Route::get('/packages','Api\PackageController@index');
 Route::get('/packages/populars','Api\PackageController@populars');
+Route::get('/packages/{id}','Api\PackageController@show');
 Route::get('/packages/category/{id}','Api\PackageController@getByCategory');
 
-Route::resource('comercial','Api\ComercialController');
+//Route::resource('comercial','Api\ComercialController');
